@@ -1,6 +1,6 @@
 {
-  "name": "@napi-rs/package-template",
-  "version": "1.0.0",
+  "name": "napi-tokei",
+  "version": "0.0.0",
   "description": "Template project for writing node package with napi-rs",
   "main": "index.js",
   "repository": "git@github.com:napi-rs/package-template.git",
@@ -18,7 +18,7 @@
     "index.js"
   ],
   "napi": {
-    "name": "package-template",
+    "name": "napi-tokei",
     "triples": {
       "defaults": true,
       "additional": [
@@ -53,7 +53,8 @@
     "lint": "eslint . -c ./.eslintrc.yml",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
-    "version": "napi version"
+    "version": "napi version",
+    "play": "cd playground & node -r @swc-node/register playground/src/index.ts"
   },
   "devDependencies": {
     "@napi-rs/cli": "^2.13.2",
@@ -102,5 +103,19 @@
     "singleQuote": true,
     "arrowParens": "always"
   },
-  "packageManager": "yarn@3.3.0"
+  "optionalDependencies": {
+    "napi-tokei-win32-x64-msvc": "1.0.0",
+    "napi-tokei-darwin-x64": "1.0.0",
+    "napi-tokei-linux-x64-gnu": "1.0.0",
+    "napi-tokei-linux-x64-musl": "1.0.0",
+    "napi-tokei-linux-arm64-gnu": "1.0.0",
+    "napi-tokei-win32-ia32-msvc": "1.0.0",
+    "napi-tokei-linux-arm-gnueabihf": "1.0.0",
+    "napi-tokei-darwin-arm64": "1.0.0",
+    "napi-tokei-android-arm64": "1.0.0",
+    "napi-tokei-freebsd-x64": "1.0.0",
+    "napi-tokei-linux-arm64-musl": "1.0.0",
+    "napi-tokei-win32-arm64-msvc": "1.0.0",
+    "napi-tokei-android-arm-eabi": "1.0.0"
+  }
 }
