@@ -19,3 +19,4 @@ export interface CodeStatus {
   code: number
   comments: number
 }
+export function tokei(include: Array<string>, exclude: Array<string>): Array<Langs>

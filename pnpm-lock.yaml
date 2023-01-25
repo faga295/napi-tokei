@@ -1,44 +1,55 @@
 lockfileVersion: 5.3
 
-specifiers:
-  '@napi-rs/cli': ^2.13.2
-  '@swc-node/register': ^1.5.4
-  '@swc/core': ^1.3.22
-  '@types/node': '*'
-  '@typescript-eslint/eslint-plugin': ^5.46.0
-  '@typescript-eslint/parser': ^5.46.0
-  ava: ^5.1.0
-  benny: ^3.7.1
-  chalk: ^5.2.0
-  eslint: ^8.29.0
-  eslint-config-prettier: ^8.5.0
-  eslint-plugin-import: ^2.26.0
-  eslint-plugin-prettier: ^4.2.1
-  husky: ^8.0.2
-  lint-staged: ^13.1.0
-  npm-run-all: ^4.1.5
-  prettier: ^2.8.1
-  typescript: ^4.9.4
+importers:
 
-devDependencies:
-  '@napi-rs/cli': 2.14.4
-  '@swc-node/register': 1.5.5_234e9c3346f0cb929d4089fb7730f3eb
-  '@swc/core': 1.3.28
-  '@types/node': 18.11.18
-  '@typescript-eslint/eslint-plugin': 5.49.0_4537ad3e2b6da5832851075417e35a92
-  '@typescript-eslint/parser': 5.49.0_eslint@8.32.0+typescript@4.9.4
-  ava: 5.1.1
-  benny: 3.7.1
-  chalk: 5.2.0
-  eslint: 8.32.0
-  eslint-config-prettier: 8.6.0_eslint@8.32.0
-  eslint-plugin-import: 2.27.5_eslint@8.32.0
-  eslint-plugin-prettier: 4.2.1_1378b02c5800deb8d1d7075877fd3b1c
-  husky: 8.0.3
-  lint-staged: 13.1.0
-  npm-run-all: 4.1.5
-  prettier: 2.8.3
-  typescript: 4.9.4
+  .:
+    specifiers:
+      '@napi-rs/cli': ^2.13.2
+      '@swc-node/register': ^1.5.4
+      '@swc/core': ^1.3.22
+      '@types/node': '*'
+      '@typescript-eslint/eslint-plugin': ^5.46.0
+      '@typescript-eslint/parser': ^5.46.0
+      ava: ^5.1.0
+      benny: ^3.7.1
+      chalk: ^5.2.0
+      eslint: ^8.29.0
+      eslint-config-prettier: ^8.5.0
+      eslint-plugin-import: ^2.26.0
+      eslint-plugin-prettier: ^4.2.1
+      husky: ^8.0.2
+      lint-staged: ^13.1.0
+      npm-run-all: ^4.1.5
+      prettier: ^2.8.1
+      typescript: ^4.9.4
+    devDependencies:
+      '@napi-rs/cli': 2.14.4
+      '@swc-node/register': 1.5.5_234e9c3346f0cb929d4089fb7730f3eb
+      '@swc/core': 1.3.28
+      '@types/node': 18.11.18
+      '@typescript-eslint/eslint-plugin': 5.49.0_4537ad3e2b6da5832851075417e35a92
+      '@typescript-eslint/parser': 5.49.0_eslint@8.32.0+typescript@4.9.4
+      ava: 5.1.1
+      benny: 3.7.1
+      chalk: 5.2.0
+      eslint: 8.32.0
+      eslint-config-prettier: 8.6.0_eslint@8.32.0
+      eslint-plugin-import: 2.27.5_eslint@8.32.0
+      eslint-plugin-prettier: 4.2.1_1378b02c5800deb8d1d7075877fd3b1c
+      husky: 8.0.3
+      lint-staged: 13.1.0
+      npm-run-all: 4.1.5
+      prettier: 2.8.3
+      typescript: 4.9.4
+
+  playground:
+    specifiers:
+      '@swc-node/register': ^1.5.4
+      napi-tokei: workspace:*
+    dependencies:
+      napi-tokei: link:..
+    devDependencies:
+      '@swc-node/register': 1.5.5
 
 packages:
 
@@ -135,6 +146,13 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@swc-node/core/1.9.2:
+    resolution: {integrity: sha512-tInCla6NO1HEQwhIc/K7PCOu4X3ppqw5xYNEMD7i41SyRuH7yp3u8x7x2cqeAD+6IAhJ5jKDPv2QRLPz7Xt3EA==}
+    engines: {node: '>= 10'}
+    peerDependencies:
+      '@swc/core': '>= 1.3'
+    dev: true
+
   /@swc-node/core/1.9.2_@swc+core@1.3.28:
     resolution: {integrity: sha512-tInCla6NO1HEQwhIc/K7PCOu4X3ppqw5xYNEMD7i41SyRuH7yp3u8x7x2cqeAD+6IAhJ5jKDPv2QRLPz7Xt3EA==}
     engines: {node: '>= 10'}
@@ -142,6 +160,22 @@ packages:
       '@swc/core': '>= 1.3'
     dependencies:
       '@swc/core': 1.3.28
+    dev: true
+
+  /@swc-node/register/1.5.5:
+    resolution: {integrity: sha512-SNpbRG8EOXShk3YAnC4suAVovYQ7oFOFdCVBA3J8hkO5qy0WHPVnlnMojTYI+8UT1CrfQ1QSUySaAARRvEdwjg==}
+    peerDependencies:
+      '@swc/core': '>= 1.3'
+      typescript: '>= 4.3'
+    dependencies:
+      '@swc-node/core': 1.9.2
+      '@swc-node/sourcemap-support': 0.2.3
+      colorette: 2.0.19
+      debug: 4.3.4
+      pirates: 4.0.5
+      tslib: 2.4.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@swc-node/register/1.5.5_234e9c3346f0cb929d4089fb7730f3eb:

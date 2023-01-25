@@ -21,11 +21,10 @@ pub struct CodeStatus {
   pub code: u32,
   pub comments: u32,
 }
-
+#[napi]
 pub fn tokei(include: Vec<String>, exclude: Vec<&str>) -> Vec<Langs> {
   let config = Config::default();
   let mut languages = Languages::new();
-  println!("{:?}", exclude);
   languages.get_statistics(&include, &exclude, &config);
   let mut vec: Vec<Langs> = vec![];
 
