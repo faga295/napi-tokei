@@ -1,3 +1,3 @@
 import { tokei } from '../../index'
 
-tokei()
+console.log(tokei())
