@@ -1,6 +1,8 @@
 # napi-tokei
 `napi-tokei` is a npm package build with Rust, helping you count your code quickly.
 
+If you want to run the binary file, you can see [tokei](https://github.com/XAMPPRocky/tokei), `napi-tokei` is exactly made of it.
+
 ## Install
 Choose your preferred package manager.
 ```
