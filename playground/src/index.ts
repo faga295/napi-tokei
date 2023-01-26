@@ -8,4 +8,4 @@ const include = [path.resolve(__dirname, '../../')]
 // Exclude any path that contains any of these strings.
 const exclude = ['packages']
 
-tokei(include, exclude) // [{ lang: 'JavaScript', lines: 238, code: 228, comments: 1, blanks: 9 }]
+console.log(tokei(include, exclude)) // [{ lang: 'JavaScript', lines: 238, code: 228, comments: 1, blanks: 9 }]
