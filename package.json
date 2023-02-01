@@ -1,5 +1,5 @@
 {
-  "name": "napi-tokei",
+  "name": "@faga/tokei",
   "version": "1.0.2",
   "description": "Get your code info, blazing fast",
   "main": "index.js",
@@ -15,10 +15,11 @@
   ],
   "files": [
     "index.d.ts",
-    "index.js"
+    "index.js",
+    "simple-test.js"
   ],
   "napi": {
-    "name": "napi-tokei",
+    "name": "tokei",
     "triples": {
       "defaults": true,
       "additional": [

@@ -45,8 +45,10 @@ importers:
   playground:
     specifiers:
       '@swc-node/register': ^1.5.4
+      chalk: ^5.2.0
       napi-tokei: workspace:*
     dependencies:
+      chalk: 5.2.0
       napi-tokei: link:..
     devDependencies:
       '@swc-node/register': 1.5.5
@@ -760,7 +762,6 @@ packages:
   /chalk/5.2.0:
     resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-    dev: true
 
   /chokidar/3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}

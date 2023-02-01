@@ -1,3 +1,3 @@
-# `napi-tokei-android-arm64`
+# `@faga/tokei-android-arm64`
 
-This is the **aarch64-linux-android** binary for `napi-tokei`
+This is the **aarch64-linux-android** binary for `@faga/tokei`

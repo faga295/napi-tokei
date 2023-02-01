@@ -1,3 +1,3 @@
-# `napi-tokei-win32-arm64-msvc`
+# `@faga/tokei-win32-arm64-msvc`
 
-This is the **aarch64-pc-windows-msvc** binary for `napi-tokei`
+This is the **aarch64-pc-windows-msvc** binary for `@faga/tokei`

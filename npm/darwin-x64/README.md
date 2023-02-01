@@ -1,3 +1,3 @@
-# `napi-tokei-darwin-x64`
+# `@faga/tokei-darwin-x64`
 
-This is the **x86_64-apple-darwin** binary for `napi-tokei`
+This is the **x86_64-apple-darwin** binary for `@faga/tokei`

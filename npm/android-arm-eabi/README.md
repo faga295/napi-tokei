@@ -1,3 +1,3 @@
-# `napi-tokei-android-arm-eabi`
+# `@faga/tokei-android-arm-eabi`
 
-This is the **armv7-linux-androideabi** binary for `napi-tokei`
+This is the **armv7-linux-androideabi** binary for `@faga/tokei`

@@ -1,3 +1,3 @@
-# `napi-tokei-freebsd-x64`
+# `@faga/tokei-freebsd-x64`
 
-This is the **x86_64-unknown-freebsd** binary for `napi-tokei`
+This is the **x86_64-unknown-freebsd** binary for `@faga/tokei`

@@ -1,3 +1,3 @@
-# `napi-tokei-linux-x64-musl`
+# `@faga/tokei-linux-x64-musl`
 
-This is the **x86_64-unknown-linux-musl** binary for `napi-tokei`
+This is the **x86_64-unknown-linux-musl** binary for `@faga/tokei`

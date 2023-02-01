@@ -1,7 +1,7 @@
 name: CI
 env:
   DEBUG: napi:*
-  APP_NAME: napi-tokei
+  APP_NAME: tokei
   MACOSX_DEPLOYMENT_TARGET: '10.13'
 'on':
   push:
