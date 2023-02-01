@@ -8,13 +8,13 @@ Choose your preferred package manager.
 ```
 
 # NPM
-$ npm install napi-tokei
+$ npm install @faga/tokei 
 
 # YARN
-$ yarn add napi-tokei
+$ yarn add @faga/tokei
 
 # PNPM
-$ pnpm install napi-tokei
+$ pnpm install @faga/tokei
 
 ```
 
@@ -22,7 +22,7 @@ $ pnpm install napi-tokei
 ```ts
 import path from 'path'
 
-import { tokei } from 'napi-tokei'
+import { tokei } from '@faga/tokei'
 
 // path need to be included, please use absolute path
 const include = [path.resolve(__dirname, '../../')]
