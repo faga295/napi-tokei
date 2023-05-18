@@ -1,6 +1,6 @@
 {
   "name": "@faga/tokei",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get your code info, blazing fast",
   "main": "index.js",
   "repository": "git@github.com:faga295/napi-tokei.git",
@@ -46,7 +46,7 @@
   "scripts": {
     "artifacts": "napi artifacts",
     "bench": "node -r @swc-node/register benchmark/bench.ts",
-    "build": "napi build --platform --release --pipe \"prettier -w\"",
+    "build": "napi build --platform --release --js-package-name @faga/tokei --pipe \"prettier -w\"",
     "build:debug": "napi build --platform --pipe \"prettier -w\"",
     "format": "run-p format:prettier format:rs",
     "format:prettier": "prettier . -w",
