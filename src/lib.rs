@@ -27,7 +27,6 @@ pub fn tokei(include: Vec<String>, exclude: Vec<&str>) -> Vec<Langs> {
   let mut languages = Languages::new();
   languages.get_statistics(&include, &exclude, &config);
   let mut vec: Vec<Langs> = vec![];
-  println!("{:?}", languages);
   for item in languages.into_iter() {
     let lang = Langs {
       lang: item.0.to_string(),

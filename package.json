@@ -1,6 +1,6 @@
 {
   "name": "@faga/tokei",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get your code info, blazing fast",
   "main": "index.js",
   "repository": "git@github.com:faga295/napi-tokei.git",
