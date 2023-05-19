@@ -4,13 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "play": "node -r @swc-node/register src/index.ts"
+    "play": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.2.0",
     "@faga/tokei": "workspace:*"
   },
   "devDependencies": {

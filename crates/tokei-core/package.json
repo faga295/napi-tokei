@@ -1,0 +1,82 @@
+{
+  "name": "@faga/tokei-core",
+  "version": "0.0.3",
+  "description": "Get your code info, blazing fast",
+  "main": "index.js",
+  "repository": "git@github.com:faga295/napi-tokei.git",
+  "license": "MIT",
+  "keywords": [
+    "napi-rs",
+    "NAPI",
+    "N-API",
+    "Rust",
+    "node-addon",
+    "node-addon-api"
+  ],
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "napi": {
+    "name": "tokei-core",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "x86_64-unknown-linux-musl",
+        "aarch64-unknown-linux-gnu",
+        "i686-pc-windows-msvc",
+        "armv7-unknown-linux-gnueabihf",
+        "aarch64-apple-darwin",
+        "aarch64-linux-android",
+        "x86_64-unknown-freebsd",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc",
+        "armv7-linux-androideabi"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "bench": "node -r @swc-node/register benchmark/bench.ts",
+    "build": "napi build --platform --release --js-package-name @faga/tokei-core --pipe \"prettier -w\"",
+    "build:debug": "napi build --platform --pipe \"prettier -w\"",
+    "format": "run-p format:prettier format:rs",
+    "format:prettier": "prettier . -w",
+    "format:rs": "cargo fmt",
+    "lint": "eslint . -c ./.eslintrc.yml",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "ava",
+    "version": "napi version"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.13.2",
+    "@swc-node/register": "^1.5.4",
+    "@swc/core": "^1.3.22",
+    "@types/node": "*",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "chalk": "^5.2.0"
+    
+  },
+  
+  "ava": {
+    "require": [
+      "@swc-node/register"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "timeout": "2m",
+    "workerThreads": false,
+    "environmentVariables": {
+      "TS_NODE_PROJECT": "../../tsconfig.json"
+    }
+  }
+}

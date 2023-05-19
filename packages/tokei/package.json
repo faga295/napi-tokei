@@ -1,0 +1,16 @@
+{
+  "name": "@faga/tokei",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": ["dist/index.js"],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faga/tokei-core": "workspace:*"
+  }
+}
