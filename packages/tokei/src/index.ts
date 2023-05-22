@@ -1,3 +1,5 @@
-import { tokei as tokeiCore, Options } from '@faga/tokei-core'
+import { tokei as tokeiCore, TokeiOptions } from '@faga/tokei-core'
 
-export default (options: Options = {}) => tokeiCore(options)
+export * from '@faga/tokei-core'
+
+export default (options: TokeiOptions = {}) => tokeiCore(options)

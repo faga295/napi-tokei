@@ -53,7 +53,8 @@
     "lint": "eslint . -c ./.eslintrc.yml",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "echo 'success'",
-    "version": "napi version"
+    "version": "napi version",
+    "gen:lang": "node ./scripts/genLang.cjs"
   },
   "devDependencies": {
     "@napi-rs/cli": "^2.13.2",

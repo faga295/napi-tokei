@@ -1,10 +1,11 @@
 #![deny(clippy::all)]
+mod lang;
+use lang::LangType;
 use napi_derive::napi;
 use std::env;
 use tokei::{Config, Languages};
-
 #[napi(object)]
-pub struct Langs {
+pub struct LangInfo {
   pub lang: String,
   pub lines: u32,
   pub code: u32,
@@ -24,16 +25,20 @@ pub struct CodeStatus {
 }
 
 #[napi(object)]
-pub struct Options {
+pub struct TokeiOptions {
   pub include: Option<Vec<String>>,
   pub exclude: Option<Vec<String>>,
-  pub langs: Option<Vec<String>>,
+  pub languages: Option<Vec<String>>,
 }
+
 #[napi]
-pub fn tokei(options: Options) -> Vec<Langs> {
+pub fn tokei(options: TokeiOptions) -> Vec<LangInfo> {
   let config = Config::default();
   let mut languages = Languages::new();
 
+  let langs: Option<Vec<LangType>> = options
+    .languages
+    .map(|lang_type| lang_type.iter().map(|s| LangType::from(&**s)).collect());
   languages.get_statistics(
     &options
       .include
@@ -46,16 +51,29 @@ pub fn tokei(options: Options) -> Vec<Langs> {
       .collect::<Vec<&str>>(),
     &config,
   );
-  let mut vec: Vec<Langs> = vec![];
-  for item in languages.into_iter() {
-    let lang = Langs {
-      lang: item.0.to_string(),
-      lines: (item.1.lines() as u32),
-      code: (item.1.code as u32),
-      comments: (item.1.comments as u32),
-      blanks: (item.1.blanks as u32),
-    };
-    vec.push(lang)
+  let mut res: Vec<LangInfo> = vec![];
+  if let Some(langs) = langs {
+    langs.iter().for_each(|lang_type| {
+      let lang = &languages[&**lang_type];
+      res.push(LangInfo {
+        lang: lang_type.to_string(),
+        lines: (lang.lines() as u32),
+        code: (lang.code as u32),
+        comments: (lang.comments as u32),
+        blanks: (lang.blanks as u32),
+      })
+    })
+  } else {
+    for lang in languages.into_iter() {
+      res.push(LangInfo {
+        lang: lang.0.to_string(),
+        lines: (lang.1.lines() as u32),
+        code: (lang.1.code as u32),
+        comments: (lang.1.comments as u32),
+        blanks: (lang.1.blanks as u32),
+      })
+    }
   }
-  vec
+
+  res
 }
