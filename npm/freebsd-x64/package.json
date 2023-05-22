@@ -1,6 +1,6 @@
 {
-  "name": "@faga/tokei-freebsd-x64",
-  "version": "1.0.3",
+  "name": "@faga/tokei-core-freebsd-x64",
+  "version": "0.0.5",
   "os": [
     "freebsd"
   ],

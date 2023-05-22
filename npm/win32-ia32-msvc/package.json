@@ -1,6 +1,6 @@
 {
-  "name": "@faga/tokei-win32-ia32-msvc",
-  "version": "1.0.3",
+  "name": "@faga/tokei-0.0.5-win32-ia32-msvc",
+  "version": "0.0.5",
   "os": [
     "win32"
   ],

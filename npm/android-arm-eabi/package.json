@@ -1,6 +1,6 @@
 {
-  "name": "@faga/tokei-android-arm-eabi",
-  "version": "1.0.3",
+  "name": "@faga/tokei-core-android-arm-eabi",
+  "version": "0.0.5",
   "os": [
     "android"
   ],

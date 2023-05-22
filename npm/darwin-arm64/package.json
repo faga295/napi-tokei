@@ -1,6 +1,6 @@
 {
-  "name": "@faga/tokei-darwin-arm64",
-  "version": "1.0.3",
+  "name": "@faga/tokei-core-darwin-arm64",
+  "version": "0.0.5",
   "os": [
     "darwin"
   ],

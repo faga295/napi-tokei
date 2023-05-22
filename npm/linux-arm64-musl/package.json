@@ -1,6 +1,6 @@
 {
-  "name": "@faga/tokei-linux-arm64-musl",
-  "version": "1.0.3",
+  "name": "@faga/tokei-0.0.5-linux-arm64-musl",
+  "version": "0.0.5",
   "os": [
     "linux"
   ],
