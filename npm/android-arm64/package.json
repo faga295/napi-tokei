@@ -1,15 +1,15 @@
 {
   "name": "@faga/tokei-core-android-arm64",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "os": [
     "android"
   ],
   "cpu": [
     "arm64"
   ],
-  "main": "tokei.android-arm64.node",
+  "main": "tokei-core.android-arm64.node",
   "files": [
-    "tokei.android-arm64.node"
+    "tokei-core.android-arm64.node"
   ],
   "description": "Get your code info, blazing fast",
   "keywords": [

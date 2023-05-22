@@ -1,15 +1,15 @@
 {
   "name": "@faga/tokei-core-win32-x64-msvc",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "os": [
     "win32"
   ],
   "cpu": [
     "x64"
   ],
-  "main": "tokei.win32-x64-msvc.node",
+  "main": "tokei-core.win32-x64-msvc.node",
   "files": [
-    "tokei.win32-x64-msvc.node"
+    "tokei-core.win32-x64-msvc.node"
   ],
   "description": "Get your code info, blazing fast",
   "keywords": [

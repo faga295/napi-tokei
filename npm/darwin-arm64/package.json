@@ -1,15 +1,15 @@
 {
   "name": "@faga/tokei-core-darwin-arm64",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "os": [
     "darwin"
   ],
   "cpu": [
     "arm64"
   ],
-  "main": "tokei.darwin-arm64.node",
+  "main": "tokei-core.darwin-arm64.node",
   "files": [
-    "tokei.darwin-arm64.node"
+    "tokei-core.darwin-arm64.node"
   ],
   "description": "Get your code info, blazing fast",
   "keywords": [
