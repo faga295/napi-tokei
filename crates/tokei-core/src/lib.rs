@@ -5,7 +5,7 @@ use napi_derive::napi;
 use std::env;
 use tokei::{Config, Languages};
 #[napi(object)]
-pub struct LangInfo {
+pub struct LanguageInfo {
   pub lang: String,
   pub lines: u32,
   pub code: u32,
@@ -32,7 +32,7 @@ pub struct TokeiOptions {
 }
 
 #[napi]
-pub fn tokei(options: TokeiOptions) -> Vec<LangInfo> {
+pub fn tokei(options: TokeiOptions) -> Vec<LanguageInfo> {
   let config = Config::default();
   let mut languages = Languages::new();
 
@@ -51,11 +51,11 @@ pub fn tokei(options: TokeiOptions) -> Vec<LangInfo> {
       .collect::<Vec<&str>>(),
     &config,
   );
-  let mut res: Vec<LangInfo> = vec![];
+  let mut res: Vec<LanguageInfo> = vec![];
   if let Some(langs) = langs {
     langs.iter().for_each(|lang_type| {
       let lang = &languages[&**lang_type];
-      res.push(LangInfo {
+      res.push(LanguageInfo {
         lang: lang_type.to_string(),
         lines: (lang.lines() as u32),
         code: (lang.code as u32),
@@ -65,7 +65,7 @@ pub fn tokei(options: TokeiOptions) -> Vec<LangInfo> {
     })
   } else {
     for lang in languages.into_iter() {
-      res.push(LangInfo {
+      res.push(LanguageInfo {
         lang: lang.0.to_string(),
         lines: (lang.1.lines() as u32),
         code: (lang.1.code as u32),
