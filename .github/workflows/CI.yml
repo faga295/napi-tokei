@@ -27,7 +27,7 @@ jobs:
             target: x86_64-apple-darwin
             build: |
               pnpm build:rs
-              strip -x crates/${{ env.APP_NAME }}/*.node
+              strip -x crates/tokei-core/*.node
           - host: windows-latest
             build: pnpm build:rs
             target: x86_64-pc-windows-msvc
@@ -42,11 +42,11 @@ jobs:
             build: |-
               set -e &&
               pnpm build:rs --target x86_64-unknown-linux-gnu &&
-              strip crates/${{ env.APP_NAME }}*.node
+              strip crates/tokei-core/*.node
           - host: ubuntu-latest
             target: x86_64-unknown-linux-musl
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine
-            build: set -e && pnpm build:rs && strip crates/${{ env.APP_NAME }}/*.node
+            build: set -e && pnpm build:rs && strip crates/tokei-core/*.node
           - host: macos-latest
             target: aarch64-apple-darwin
             build: |
@@ -56,14 +56,14 @@ jobs:
               SYSROOT=$(xcrun --sdk macosx --show-sdk-path);
               export CFLAGS="-isysroot $SYSROOT -isystem $SYSROOT";
               pnpm build:rs --target aarch64-apple-darwin
-              strip -x crates/${{ env.APP_NAME }}/*.node
+              strip -x crates/tokei-core/*.node
           - host: ubuntu-latest
             target: aarch64-unknown-linux-gnu
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian-aarch64
             build: |-
               set -e &&
               pnpm build:rs --target aarch64-unknown-linux-gnu &&
-              aarch64-unknown-linux-gnu-strip crates/${{ env.APP_NAME }}/*.node
+              aarch64-unknown-linux-gnu-strip crates/tokei-core/*.node
           - host: ubuntu-latest
             target: armv7-unknown-linux-gnueabihf
             setup: |
@@ -71,17 +71,17 @@ jobs:
               sudo apt-get install gcc-arm-linux-gnueabihf -y
             build: |
               pnpm build:rs --target armv7-unknown-linux-gnueabihf
-              arm-linux-gnueabihf-strip crates/${{ env.APP_NAME }}/*.node
+              arm-linux-gnueabihf-strip crates/tokei-core/*.node
           - host: ubuntu-latest
             target: aarch64-linux-android
             build: |
               pnpm build:rs --target aarch64-linux-android
-              ${ANDROID_NDK_LATEST_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip crates/${{ env.APP_NAME }}/*.node
+              ${ANDROID_NDK_LATEST_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip crates/tokei-core/*.node
           - host: ubuntu-latest
             target: armv7-linux-androideabi
             build: |
               pnpm build:rs --target armv7-linux-androideabi
-              ${ANDROID_NDK_LATEST_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip crates/${{ env.APP_NAME }}/*.node
+              ${ANDROID_NDK_LATEST_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip crates/tokei-core/*.node
           - host: ubuntu-latest
             target: aarch64-unknown-linux-musl
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine
@@ -89,7 +89,7 @@ jobs:
               set -e &&
               rustup target add aarch64-unknown-linux-musl &&
               pnpm build:rs --target aarch64-unknown-linux-musl &&
-              /aarch64-linux-musl-cross/bin/aarch64-linux-musl-strip crates/${{ env.APP_NAME }}/*.node
+              /aarch64-linux-musl-cross/bin/aarch64-linux-musl-strip crates/tokei-core/*.node
           - host: windows-latest
             target: aarch64-pc-windows-msvc
             build: pnpm build:rs --target aarch64-pc-windows-msvc
