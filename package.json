@@ -21,13 +21,11 @@
     "benny": "^3.7.1"
   },
   "lint-staged": {
-    "*.@(js|ts|tsx)": [
-      "eslint -c .eslintrc.yml --fix"
-    ],
     "*.@(js|ts|tsx|yml|yaml|md|json)": [
       "prettier --write"
     ]
   },
+  "packageManager": "pnpm@7.32.0",
   "prettier": {
     "printWidth": 120,
     "semi": false,
