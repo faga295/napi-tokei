@@ -10,7 +10,8 @@
     "test": "pnpm -C crates/tokei-core test",
     "changeset": "changeset",
     "release": "changeset publish --no-git-checks",
-    "bump": "changeset version"
+    "bump": "changeset version",
+    "artifacts": "pnpm -C crates/tokei-core artifacts"
   },
   "keywords": [],
   "author": "",
