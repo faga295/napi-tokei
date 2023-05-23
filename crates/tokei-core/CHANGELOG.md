@@ -1,5 +1,11 @@
 # @faga/tokei-core
 
+## 0.0.8
+
+### Patch Changes
+
+- d15aa2c: add napi target
+
 ## 0.0.7
 
 ### Patch Changes
