@@ -53,16 +53,9 @@
     "typescript": "^4.9.4"
   },
   "optionalDependencies": {
-    "@faga/tokei-core-android-arm-eabi": "workspace:*",
-    "@faga/tokei-core-android-arm64": "workspace:*",
     "@faga/tokei-core-darwin-arm64": "workspace:*",
     "@faga/tokei-core-darwin-x64": "workspace:*",
-    "@faga/tokei-core-freebsd-x64": "workspace:*",
-    "@faga/tokei-core-linux-arm-gnueabihf": "workspace:*",
     "@faga/tokei-core-linux-arm64-gnu": "workspace:*",
-    "@faga/tokei-core-linux-arm64-musl": "workspace:*",
-    "@faga/tokei-core-win32-arm64-msvc": "workspace:*",
-    "@faga/tokei-core-win32-ia32-msvc": "workspace:*",
     "@faga/tokei-core-win32-x64-msvc": "workspace:*"
   },
   "ava": {
