@@ -11,7 +11,7 @@
     "changeset": "changeset",
     "release": "changeset publish --no-git-checks",
     "bump": "changeset version",
-    "artifacts": "pnpm -C crates/tokei-core artifacts"
+    "artifacts": "napi artifacts"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +23,8 @@
     "lint-staged": "^13.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.1",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "@napi-rs/cli": "^2.13.2"
   },
   "lint-staged": {
     "*.@(js|ts|tsx|yml|yaml|md|json)": [
