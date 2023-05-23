@@ -1,6 +1,6 @@
 {
   "name": "@faga/tokei-core-linux-arm-gnueabihf",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "os": [
     "linux"
   ],

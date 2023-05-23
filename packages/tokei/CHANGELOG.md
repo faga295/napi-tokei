@@ -1,5 +1,11 @@
 # @faga/tokei
 
+## 0.0.9
+
+### Patch Changes
+
+- @faga/tokei-core@0.0.7
+
 ## 0.0.8
 
 ### Patch Changes
