@@ -1,5 +1,13 @@
 # @faga/tokei
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [fee0276]
+- Updated dependencies [e272c1e]
+  - @faga/tokei-core@0.0.7
+
 ## 0.0.8
 
 ### Patch Changes
