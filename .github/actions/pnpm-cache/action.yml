@@ -4,7 +4,7 @@ description: Install Node.js with pnpm global cache
 
 inputs:
   node-version:
-    default: "16"
+    default: '18'
     required: false
     type: string
 
@@ -20,8 +20,8 @@ runs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ inputs.node-version }}
-        cache: "pnpm"
+        cache: 'pnpm'
 
     - name: Install Npm Dependencies
       shell: bash
-      run: pnpm install
+      run: pnpm install --no-frozen-lockfile
