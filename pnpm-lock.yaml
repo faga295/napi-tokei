@@ -7,9 +7,6 @@ importers:
       '@changesets/cli':
         specifier: ^2.26.1
         version: 2.26.1
-      '@napi-rs/cli':
-        specifier: ^2.13.2
-        version: 2.14.4
       benny:
         specifier: ^3.7.1
         version: 3.7.1
@@ -78,29 +75,11 @@ importers:
         specifier: ^4.9.4
         version: 4.9.4
 
-  npm/android-arm-eabi: {}
-
-  npm/android-arm64: {}
-
   npm/darwin-arm64: {}
 
   npm/darwin-x64: {}
 
-  npm/freebsd-x64: {}
-
-  npm/linux-arm-gnueabihf: {}
-
   npm/linux-arm64-gnu: {}
-
-  npm/linux-arm64-musl: {}
-
-  npm/linux-x64-gnu: {}
-
-  npm/linux-x64-musl: {}
-
-  npm/win32-arm64-msvc: {}
-
-  npm/win32-ia32-msvc: {}
 
   npm/win32-x64-msvc: {}
 
