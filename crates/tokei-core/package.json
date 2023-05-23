@@ -20,7 +20,10 @@
   "napi": {
     "name": "tokei-core",
     "triples": {
-      "defaults": true
+      "defaults": true,
+      "additional": [
+        "aarch64-apple-darwin"
+      ]
     }
   },
   "engines": {
