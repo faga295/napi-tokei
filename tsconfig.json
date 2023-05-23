@@ -3,6 +3,7 @@
     "target": "ES2018",
     "strict": true,
     "moduleResolution": "node",
+    "declaration": true,
     "module": "CommonJS",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
