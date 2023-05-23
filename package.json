@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build:rs": "pnpm -C crates/tokei-core build",
     "build:js": "pnpm -C packages/tokei build",
