@@ -1,8 +1,6 @@
 # napi-tokei
 
-`napi-tokei` is a npm package build with Rust, helping you count your code quickly.
-
-If you want to run the binary file, you can see [tokei](https://github.com/XAMPPRocky/tokei), `napi-tokei` is exactly made of it.
+`napi-tokei` is a node binding built with `tokei`, helping you count your code quickly.
 
 ## Install
 
@@ -24,15 +22,7 @@ $ pnpm install @faga/tokei
 ## Examples
 
 ```ts
-const { tokei } = require('@faga/tokei')
+const tokei = require('@faga/tokei').default
 
-// path need to be included, please use absolute path
-const include = [process.cwd()]
-
-// Exclude any path that contains any of these strings.
-const exclude = ['node_modules']
-
-console.log(tokei(include, exclude))
+console.log(tokei({ include: [process.cwd()], exclude: [], languages: ['JavaScript'] }))
 ```
-
-![](https://lzc-personal-resource.oss-cn-beijing.aliyuncs.com/20230126164310.png)
