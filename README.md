@@ -22,7 +22,12 @@ $ pnpm install @faga/tokei
 ## Examples
 
 ```ts
-const tokei = require('@faga/tokei').default
+import tokei from '@faga/tokei'
+import process from 'process'
 
-console.log(tokei({ include: [process.cwd()], exclude: [], languages: ['JavaScript'] }))
+const include = [process.cwd()]
+
+const exclude = ['node_modules']
+
+console.log(tokei({ include, exclude, languages: ['TypeScript'] }))
 ```
