@@ -3,6 +3,7 @@
   "version": "0.0.8",
   "description": "Get your code stats, blazing fast",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": "git@github.com:faga295/napi-tokei.git",
   "license": "MIT",
   "keywords": [
