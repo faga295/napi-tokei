@@ -1,5 +1,12 @@
 # @faga/tokei-core
 
+## 0.0.6
+
+### Patch Changes
+
+- ef6dcae: update description
+- f870321: add optionaldependency
+
 ## 0.0.5
 
 ### Patch Changes
