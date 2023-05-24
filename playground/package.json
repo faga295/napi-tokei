@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "play": "node src/index.js"
+    "play": "tsx src/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "@faga/tokei": "workspace:*"
   },
   "devDependencies": {
-    "@swc-node/register": "^1.5.4"
+    "@types/node": "^18.11.18",
+    "tsx": "^3.12.7"
   }
 }

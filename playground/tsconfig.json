@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "strict": true,
+      "moduleResolution": "node",
+      "declaration": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "types": ["node"]
+    },
+    "include": ["."],
+    "exclude": ["node_modules"]
+}
+  
