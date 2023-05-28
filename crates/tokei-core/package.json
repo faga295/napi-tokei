@@ -1,6 +1,6 @@
 {
   "name": "@faga/tokei-core",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "description": "Get your code stats, blazing fast",
   "main": "index.js",
   "types": "index.d.ts",
