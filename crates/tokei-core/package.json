@@ -1,6 +1,6 @@
 {
   "name": "@faga/tokei-core",
-  "version": "0.0.12",
+  "version": "0.0.21",
   "description": "Get your code stats, blazing fast",
   "main": "index.js",
   "types": "index.d.ts",
@@ -43,7 +43,6 @@
     "format:prettier": "prettier . -w",
     "format:rs": "cargo fmt",
     "lint": "eslint . -c ./.eslintrc.yml",
-    "prepublishOnly": "napi prepublish -t npm",
     "test": "echo 'success'",
     "version": "napi version",
     "gen:lang": "node ./scripts/genLang.cjs"
